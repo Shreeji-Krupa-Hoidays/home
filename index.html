@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shreeji Krupa Holidays</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #faf3e0; /* Soft beige background */
+      }
+      nav {
+        display: flex;
+        align-items: center;
+        padding: 10px 20px;
+        background-color: #d6c29f; /* Light golden beige for nav */
+        color: white;
+      }
+      nav img {
+        height: 40px;
+        margin-right: 10px;
+      }
+      nav h1 {
+        font-size: 24px;
+        margin: 0;
+      }
+      section {
+        margin: 20px;
+      }
+      .carousel-container {
+        position: relative;
+        width: 80%; /* Fixed width for carousel */
+        max-width: 1000px; /* Maximum width for larger screens */
+        margin: auto; /* Center the carousel */
+        overflow: hidden;
+      }
+      .carousel {
+        display: flex;
+        transition: transform 0.5s ease-in-out;
+      }
+      .carousel img,
+      .review-card,
+      .instagram-post {
+        flex: 0 0 100%;
+        height: 55%;
+        max-width: 100%;
+        width: 55%;
+        max-height: 55%;
+        object-fit: cover;
+        opacity: 0.5;
+        transform: scale(0.8);
+        transition: opacity 0.5s, transform 0.5s;
+      }
+      .carousel img.focus,
+      .review-card.focus,
+      .instagram-post.focus {
+        opacity: 1;
+        transform: scale(1);
+      }
+      .review-card,
+      .instagram-post {
+        padding: 20px;
+        background-color: #ffffff;
+        border: 1px solid #ddd;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        font-size: 16px;
+      }
+      footer {
+        background-color: #b89062; /* Dark golden beige for footer */
+        color: white;
+        text-align: center;
+        padding: 10px;
+      }
+      .contact-card {
+        max-width: 400px;
+        margin: 20px auto;
+        padding: 20px;
+        background-color: #f9f9f9;
+        border: 1px solid #ddd;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        text-align: center;
+      }
+      .contact-card h3 {
+        margin-bottom: 10px;
+      }
+      .carousel-video-reviews video {
+        width: 100%;
+        height: 60px;
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <img
+        src="./WhatsApp_Image_2025-01-06_at_19.46.34__2_-removebg-preview.png"
+        alt="Shreeji Krupa Holidays Logo"
+      />
+      <img
+        src="./WhatsApp_Image_2025-01-06_at_19.46.34__1_-removebg-preview.png"
+        alt="Logo Text"
+      />
+    </nav>
+
+    <section>
+      <h2>Current Events</h2>
+      <div class="carousel-container">
+        <div class="carousel" id="carousel-events">
+          <img
+            src="./WhatsApp Image 2025-01-08 at 16.54.18.jpeg"
+            alt="Nepal Poster"
+          />
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Trips with Clients</h2>
+      <div class="carousel-container">
+        <div class="carousel" id="carousel-trips">
+                      
+          <img
+            src="./WhatsApp Image 2025-01-06 at 19.53.13.jpeg"
+            alt="Event Poster 1"
+          />
+          <img
+            src="./WhatsApp Image 2025-01-06 at 19.53.35.jpeg"
+            alt="Event Poster 3"
+          />
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Video Reviews</h2>
+      <div class="carousel-container">
+        <div class="carousel" id="carousel-video-reviews">
+          <video width="500" controls>
+            <source src="./ReviewEdited (1).mp4" type="video/mp4" />
+          </video>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Written Reviews</h2>
+      <div class="carousel-container">
+        <div class="carousel" id="carousel-written-reviews">
+          <div class="review-card">
+            "Amazing experience! Highly recommended."
+          </div>
+          <div class="review-card">
+            "A wonderful trip with fantastic service."
+          </div>
+          <div class="review-card">
+            "Memorable holiday. Great planning!"
+          </div>
+          <div class="review-card">
+            "Simply fantastic! Will book again."
+          </div>
+          <div class="review-card">
+            "A perfect getaway. Excellent arrangements!"
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Instagram Posts</h2>
+      <div class="carousel-container">
+        <div class="carousel" id="carousel-instagram">
+          <div class="instagram-post">Instagram Post 1 Content</div>
+          <div class="instagram-post">Instagram Post 2 Content</div>
+          <div class="instagram-post">Instagram Post 3 Content</div>
+          <div class="instagram-post">Instagram Post 4 Content</div>
+          <div class="instagram-post">Instagram Post 5 Content</div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Contact Us</h2>
+      <div class="contact-card">
+        <h3>Shreeji Krupa Holidays</h3>
+        <p>Email: dipuparikh1@gmail.com</p>
+        <p>Phone: +91 94299 65850</p>
+        <p>Phone: +91 70165 32248</p>
+        <p>Address: Ahmedabad, Gujarat, India</p>
+      </div>
+    </section>
+
+    <footer>
+      <p>&copy; 2025 Shreeji Krupa Holidays. All Rights Reserved.</p>
+      <p>Designed with love in Ahmedabad.</p>
+    </footer>
+
+    <script>
+      function initCarousel(carouselId) {
+        const carousel = document.getElementById(carouselId);
+        const items = carousel.children;
+        let currentIndex = 0;
+
+        function updateFocus() {
+          Array.from(items).forEach((item, index) => {
+            item.classList.toggle("focus", index === currentIndex);
+          });
+        }
+
+        function nextSlide() {
+          currentIndex = (currentIndex + 1) % items.length;
+          carousel.style.transform = `translateX(-${currentIndex * 100}%)`;
+          updateFocus();
+        }
+
+        // Initialize focus
+        updateFocus();
+
+        // Auto-slide every 3 seconds
+        setInterval(nextSlide, 3000);
+      }
+
+      initCarousel("carousel-events");
+      initCarousel("carousel-trips");
+      initCarousel("carousel-video-reviews");
+      initCarousel("carousel-written-reviews");
+      initCarousel("carousel-instagram");
+    </script>
+  </body>
+</html>
